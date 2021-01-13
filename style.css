@@ -33,41 +33,59 @@
   color: #c74a3d;
 }
 
-.modal-header {
-  padding: 2px 16px;
-  background-color: #c9c758;
-  color: white;
-}
+.modal {
+  display: none;
+  position: fixed;
 
-.modal-body {
-  padding: 2px 16px;
-}
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 
-.modal-footer {
-  padding: 2px 16px;
-  background-color: #c9c758;
-  color: white;
-}
-
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgba(37, 37, 37, 0.151);
   animation-name: animatetop;
   animation-duration: 0.4s;
 }
 
+.modal__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  background-color: rgb(177, 191, 255);
+}
+
+.modal__header {
+  padding: 2px 16px;
+  background-color: #c9c758;
+  color: white;
+}
+
+.modal__body {
+  padding: 2px 16px;
+}
+
+.modal__footer {
+  padding: 2px 16px;
+  background-color: #c9c758;
+  color: white;
+}
+
+#btnCloseModal {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(0, 145, 150);
+}
+
 @keyframes animatetop {
   from {
-    top: -300px;
     opacity: 0;
   }
   to {
-    top: 0;
     opacity: 1;
   }
 }

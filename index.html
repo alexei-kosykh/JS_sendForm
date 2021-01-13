@@ -7,9 +7,21 @@
     <title>Form</title>
   </head>
   <body>
-    <form action="" class="sendForm" name="blank">
-      <label id="labelName" for="inputName">Введите имя</label>
-      <input type="text" placeholder="Имя" class="sendInput" id="inputName" />
+    <div class="modal">
+      <div class="modal__wrapper">
+        <div class="modal__header">
+          <h2>Ваши данные</h2>
+        </div>
+        <div class="modal__body" id="bodyModal"></div>
+        <div class="modal__footer">
+          <button id="btnCloseModal">Закрыть</button>
+        </div>
+      </div>
+    </div>
+
+    <form id="form" class="sendForm" name="form">
+      <label id="labelName" for="userName">Введите имя</label>
+      <input type="text" placeholder="Имя" class="sendInput" id="userName" />
       <label id="labelNameCheck">This field is required</label>
 
       <label>Введите возраст</label>
@@ -17,14 +29,15 @@
         type="text"
         placeholder="Возраст"
         class="sendInput"
-        id="inputAge"
+        id="userAge"
+        maxlength="3"
       />
 
       <label>Введите дату рождения</label>
-      <input type="date" class="sendInput" id="inputDay" />
+      <input type="date" class="sendInput" id="userDay" />
 
       <label>Введите свое образование</label>
-      <select id="inputEducation" class="sendInput">
+      <select id="userEducation" class="sendInput">
         <option id="education1" value="Низшее" selected>Низшее</option>
         <option id="education2" value="Среднее">Среднее</option>
         <option id="education3" value="Высшее">Высшее</option>
@@ -50,20 +63,9 @@
         />
         <label for="genderChoice2">Ж</label>
       </div>
-      <button type="button" id="sendBtn" class="sendButton">Отправить</button>
+      <button type="submit" id="sendBtn" class="sendButton">Отправить</button>
     </form>
 
     <script src="index.js"></script>
-
-    <div class="modal-content" id="modal" hidden>
-      <div class="modal-header">
-        <span class="close">&times;</span>
-        <h2>Ваши данные</h2>
-      </div>
-      <div class="modal-body" id="bodyModal"></div>
-      <div class="modal-footer">
-        <button id="btnCloseModal">Закрыть</button>
-      </div>
-    </div>
   </body>
 </html>
